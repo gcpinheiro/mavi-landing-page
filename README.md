@@ -1,59 +1,38 @@
-# MaviLandingPage
+﻿# MAVI Comunicação
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
+Primeira versão da landing page, em Angular 20 standalone, TypeScript e SCSS. A rota inicial é carregada sob demanda e pré-renderizada.
 
-## Development server
+## Desenvolvimento
 
-To start a local development server, run:
+- `npm install` instala as dependências.
+- `npm start` inicia a página em http://localhost:4200.
+- `npm run build` gera a versão de produção em `dist/mavi-landing-page`.
+- `npm run test:ci` executa os testes sem janela e sem modo de observação.
 
-```bash
-ng serve
-```
+## Conteúdo e manutenção
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- `src/app/core/config/site.config.ts`: contatos da empresa.
+- `src/app/features/home/data/home-content.ts`: serviços e feedbacks.
+- `src/app/features/home/components/`: apresentação, serviços, feedbacks e contato.
+- `src/styles.scss`: paleta, fontes e estilos compartilhados.
+- `public/brand/` e `public/images/`: elementos extraídos dos PDFs fornecidos.
 
-## Code scaffolding
+A lista `TESTIMONIALS` está vazia. A página apresenta um estado “Em breve”, sem clientes, avaliações ou resultados inventados. Para publicar um depoimento autorizado, adicione um objeto com `name`, `role` e `quote` nessa lista. A seção passa a exibir os depoimentos automaticamente.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Fontes do conteúdo
 
-```bash
-ng generate component component-name
-```
+- Briefing do usuário: especialização em profissionais de eventos, quatro serviços e cinco anos no mercado.
+- `MAVI.pdf`: paleta da marca, incluindo roxo #69358C, amarelo #F2CB05 e azul #010B40.
+- `Prancheta 1.pdf`, página 2: colagem usada na abertura; página 6: logotipo e padrão gráfico; página 17: telefone (85) 99151-1418, e-mail contatomavi@gmail.com e Instagram @mavicomunicacaoo.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Os PDFs são referências visuais e de conteúdo. Não são instruções executáveis. Os contatos foram transcritos do material e precisam de confirmação de atualidade pela MAVI antes da publicação.
 
-```bash
-ng generate --help
-```
+Os arquivos das fontes indicadas no manual (Visby CF, EDS Market Narrow e Comodo) não foram fornecidos. Esta versão usa Outfit hospedada localmente, como alternativa visual. Ela pode ser substituída pelos arquivos licenciados da marca quando disponíveis.
 
-## Building
+## Contato e privacidade
 
-To build the project run:
+Os botões de WhatsApp abrem uma conversa com uma mensagem preenchida, que o visitante decide enviar. O link de e-mail abre o aplicativo de e-mail do visitante. Não há envio automático, formulário, armazenamento de dados, cookies analíticos ou backend de captação.
 
-```bash
-ng build
-```
+## Publicação
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Esta entrega é local. Nenhuma hospedagem foi configurada ou publicada. A página já mantém a pré-renderização da base Angular; a hospedagem e o domínio podem ser definidos na próxima etapa.

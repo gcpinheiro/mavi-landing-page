@@ -1,0 +1,27 @@
+:host { display: block; }
+.brand-strip { background: var(--purple); color: white; overflow: hidden; }
+.brand-strip>div { max-width: 1400px; margin: auto; padding: 1.5rem 3%; display: flex; justify-content: space-between; gap: 1.5rem; align-items: center; white-space: nowrap; }
+.brand-strip span { font-size: 1.125rem; font-weight: 500; letter-spacing: .025em; }
+.brand-strip i { color: var(--yellow); font-size: 1.75rem; font-style: normal; line-height: 1; }
+.about-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 80px; }
+h2 span { color: var(--purple); }
+.about-signature { margin-top: 2.7rem; display: flex; align-items: center; gap: 1rem; }
+.signature-star { color: var(--purple); font-size: 3.2rem; line-height: 1; }
+.about-signature p { line-height: 1.6; margin: 0; font-size: .9375rem; }
+.about-signature strong { font-weight: 500; }
+.about-copy { padding-top: 2.15rem; }
+.about-copy .intro { font-weight: 500; color: var(--ink); font-size: 1.4rem; line-height: 1.4; margin-top: 0; }
+.about-copy>p { color: var(--muted); font-size: 1rem; line-height: 1.8; }
+.about-copy .text-link { margin-top: 1.1rem; }
+@media(max-width:1050px) {
+.about-grid {gap:40px}
+.brand-strip>div {width:max-content;gap:2rem;padding-inline:2rem}
+}
+@media(max-width:760px) {
+.brand-strip>div {padding-block:1.2rem;gap:1.5rem}
+.brand-strip span {font-size:1rem}
+.about-grid {grid-template-columns:1fr;gap:2.5rem}
+.about-copy {padding-top:0}
+.about-copy .intro {font-size:1.25rem}
+.about-signature {margin-top:1.7rem}
+}

@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face { font-family: 'Outfit'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/outfit-regular.ttf') format('truetype'); }
+@font-face { font-family: 'Outfit'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/outfit-medium.ttf') format('truetype'); }
+@font-face { font-family: 'Outfit'; font-style: normal; font-weight: 600 800; font-display: swap; src: url('/fonts/outfit-semibold.ttf') format('truetype'); }
+:root { --purple: #69358c; --yellow: #f2cb05; --ink: #010b40; --paper: #faf9f6; --muted: #57586a; --font-body: 'Outfit', 'Century Gothic', 'Trebuchet MS', sans-serif; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body { margin: 0; font-family: var(--font-body); font-size: 16px; color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; }
+button, input, textarea { font: inherit; }a { color: inherit; text-underline-offset: .3em; }button, a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible { outline: 3px solid #0554f2; outline-offset: 5px; }
+img { max-width: 100%; }::selection { background: var(--purple); color: white; }
+.container { width: min(1200px, 88%); margin-inline: auto; }.section { padding-block: 100px; }
+.eyebrow { font-size: .75rem; font-weight: 600; letter-spacing: .11em; line-height: 1.5; margin: 0 0 1.25rem; color: var(--purple); }
+h2 { margin: 0; font-size: clamp(2.25rem, 3.2vw, 3.1rem); line-height: 1.13; font-weight: 500; letter-spacing: -.045em; }
+h2 span { color: var(--purple); }
+h1, h2, h3 { overflow-wrap: anywhere; }
+.button { display: inline-flex; align-items: center; justify-content: center; min-height: 58px; gap: 1.6rem; padding: 1rem 1.4rem; border: 1px solid transparent; border-radius: 5px; text-decoration: none; font-size: .9375rem; font-weight: 500; line-height: 1.5; transition: background .2s, box-shadow .2s; }
+.button-purple { background: var(--purple); color: white; }.button-purple:hover { background: #53296f; box-shadow: 4px 4px 0 #010b4030; }.button app-icon { width: 1.15rem; height: 1.15rem; }
+.text-link { display: inline-flex; align-items: center; gap: .8rem; text-decoration: none; border-bottom: 1px solid #69358c50; padding-bottom: .4rem; color: var(--purple); font-size: .9375rem; font-weight: 500; line-height: 1.5; }.text-link app-icon { width: 1rem; height: 1rem; }
+.skip-link { position: fixed; left: 1rem; top: -100px; z-index: 100; padding: 1rem; background: white; color: var(--ink); border: 2px solid var(--purple); }.skip-link:focus { top: 1rem; }
+@media(max-width:760px){.section{padding-block:64px}.container{width:88%}h2{font-size:clamp(2rem,7.5vw,2.8rem)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
