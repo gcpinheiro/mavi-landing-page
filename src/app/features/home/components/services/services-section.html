@@ -1,7 +1,8 @@
   <section class="section services" id="servicos" aria-labelledby="services-title">
     <div class="container">
       <div class="section-heading" appReveal><div><p class="eyebrow">O QUE FAZEMOS</p><h2 id="services-title">Da essência à presença.<br><span>Sua marca por inteiro.</span></h2></div><p>Estratégia e criatividade juntas para<br>mostrar o que faz você ser a escolha certa.</p></div>
-      <div class="services-grid">@for (service of services; track service.number) {<article class="service-card" appReveal><div class="service-top"><app-icon [name]="service.icon" /><span>{{ service.number }}</span></div><h3>{{ service.title }}</h3><p>{{ service.description }}</p><span class="service-tag">{{ service.tag }}</span></article>}</div>
+      <div class="services-grid">@for (service of services; track service.number) {<article class="service-card" appReveal><div class="service-top"><app-icon [name]="service.icon" /><span>{{ service.number }}</span></div><h3>{{ service.title }}</h3><p>{{ service.description }}</p><ul class="deliverables">@for (item of deliverables[service.number]; track item) {<li>{{ item }}</li>}</ul><span class="service-tag">{{ service.tag }}</span></article>}</div>
+      <p class="demo-note">Escopos demonstrativos. As entregas finais serão definidas na proposta.</p>
       <a class="services-bottom" href="#contato"><span>Vamos encontrar a melhor forma de comunicar a sua marca?</span><span class="services-bottom-action">Converse com a MAVI <app-icon /></span></a>
     </div>
   </section>

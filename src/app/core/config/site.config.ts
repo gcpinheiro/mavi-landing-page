@@ -1,5 +1,6 @@
 // Contatos extraídos da página 17 de Prancheta 1.pdf.
 export const SITE_CONFIG = {
+  designPreview: true,
   name: 'MAVI Comunicação',
   email: 'contatomavi@gmail.com',
   phone: '(85) 99151-1418',

@@ -1,4 +1,5 @@
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+@if (site.designPreview) {<div class="design-preview"><span>PRÉVIA DE DESIGN</span> Conteúdos demonstrativos para apresentação. Informações finais em validação com a MAVI.</div>}
 <app-site-header />
 <main id="conteudo">
   <app-hero-section />
@@ -10,7 +11,12 @@
     </div>
   </section>
   <app-services-section />
+  <app-portfolio-section />
+  <app-journey-section />
+  <app-team-section />
   <app-feedbacks-section />
+  <app-engagements-section />
   <app-contact-section />
 </main>
 <app-site-footer />
+<a class="whatsapp-float" [href]="site.whatsappUrl" target="_blank" rel="noopener noreferrer" aria-label="Conversar com a MAVI no WhatsApp"><span class="whatsapp-label">Vamos conversar?</span><span class="whatsapp-icon"><app-icon name="whatsapp" /></span></a>

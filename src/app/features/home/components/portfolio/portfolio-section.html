@@ -1,0 +1,17 @@
+<section class="section portfolio" id="portfolio" aria-labelledby="portfolio-title">
+  <div class="container">
+    <div class="portfolio-heading" appReveal><div><p class="eyebrow">DO PLANEJAMENTO AO PLAY</p><h2 id="portfolio-title">Ideias que saem do papel.<br><span>Marcas que ganham vida.</span></h2></div><p>Um pouco de cor, movimento<br>e muita personalidade.</p></div>
+    <div class="portfolio-grid">
+      <figure class="film-card" appReveal>
+        <div class="film-frame">
+          <span class="media-label">VÍDEO DEMONSTRATIVO</span>
+          <video controls playsinline preload="none" [poster]="portfolio.poster" aria-label="Vídeo ilustrativo de evento para demonstração do portfólio" (error)="videoFailed.set(true)"><source [src]="portfolio.video" type="video/mp4" (error)="videoFailed.set(true)" />Seu navegador não oferece suporte a vídeo. <a [href]="portfolio.video">Abrir o vídeo</a>.</video>
+        </div>
+        @if (videoFailed()) {<p class="video-error" role="status">Não foi possível carregar a prévia. <a [href]="portfolio.video" target="_blank" rel="noopener">Tente abrir o vídeo diretamente.</a></p>}
+        <figcaption><div><span class="project-type">AUDIOVISUAL & COBERTURA DE EVENTOS</span><h3>{{ portfolio.title }}</h3></div><span class="project-number" aria-hidden="true">01</span></figcaption>
+      </figure>
+      <div class="portfolio-side">@for (project of portfolio.images; track project.image) {<figure class="project-card" appReveal><div class="project-image"><img [src]="project.image" [alt]="project.alt" width="1000" height="600" loading="lazy" /><span class="media-label">APLICAÇÃO DA MARCA</span></div><figcaption><span class="project-type">{{ project.tag }}</span><h3>{{ project.title }}</h3></figcaption></figure>}</div>
+    </div>
+    <p class="portfolio-note">Seleção ilustrativa para esta prévia: vídeo de banco de imagens e aplicações do material visual da MAVI.</p>
+  </div>
+</section>

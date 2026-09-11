@@ -1,4 +1,11 @@
 :host { display: block; }
+.design-preview { display: flex; justify-content: center; align-items: center; gap: .8rem; padding: .55rem 5%; font-size: .75rem; line-height: 1.5; color: #eee4f5; background: #472262; }
+.design-preview>span { color: var(--yellow); letter-spacing: .06em; flex-shrink: 0; }
+.whatsapp-float { position: fixed; right: max(24px, env(safe-area-inset-right)); bottom: max(24px, env(safe-area-inset-bottom)); z-index: 40; display: inline-flex; gap: .75rem; align-items: center; text-decoration: none; border-radius: 50px; }
+.whatsapp-label { padding: .65rem .9rem; border-radius: 6px; background: white; box-shadow: 0 4px 24px #010b401a; border: 1px solid #010b4018; font-size: .875rem; }
+.whatsapp-icon { display: flex; justify-content: center; align-items: center; height: 60px; width: 60px; border: 2px solid white; border-radius: 50%; background: #168547; color: white; box-shadow: 0 5px 22px #010b4030; transition: background .2s, transform .2s; }
+.whatsapp-icon app-icon { height: 30px; width: 30px; }.whatsapp-float:hover .whatsapp-icon { background: #106d39; transform: translateY(-3px); }
+@media(max-width:600px){.design-preview{display:block;text-align:center;font-size:.75rem}.design-preview>span{display:block}.whatsapp-float{right:16px;bottom:max(16px,env(safe-area-inset-bottom))}.whatsapp-label{display:none}.whatsapp-icon{width:56px;height:56px}}
 .brand-strip { background: var(--purple); color: white; overflow: hidden; }
 .brand-strip>div { max-width: 1400px; margin: auto; padding: 1.5rem 3%; display: flex; justify-content: space-between; gap: 1.5rem; align-items: center; white-space: nowrap; }
 .brand-strip span { font-size: 1.125rem; font-weight: 500; letter-spacing: .025em; }

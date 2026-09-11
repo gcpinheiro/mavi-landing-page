@@ -1,0 +1,6 @@
+<section class="section journey" id="como-funciona" aria-labelledby="journey-title"><div class="container">
+  <div class="audience-grid" appReveal><div><p class="eyebrow">SEU UNIVERSO É O NOSSO NICHO</p><h2>Para quem faz<br><span>o evento acontecer.</span></h2></div><div><div class="audience-tags">@for (audience of audiences; track audience) {<span>{{ audience }}</span>}</div><div class="locations"><div><span class="location-type">DE PERTO</span><strong>Fortaleza e região</strong><p>Produção e cobertura presencial.<br>Outras cidades sob consulta.</p></div><div><span class="location-type">DE ONDE VOCÊ ESTIVER</span><strong>Todo o Brasil</strong><p>Estratégia, criação e gestão<br>com atendimento online.</p></div></div></div></div>
+  <div class="process-heading" appReveal><div><p class="eyebrow">COMO A GENTE FAZ ACONTECER</p><h2 id="journey-title">Do primeiro oi<br><span>à próxima grande ideia.</span></h2></div><p>Você participa. A gente conduz.<br>Uma parceria próxima, em cada etapa.</p></div>
+  <ol class="steps">@for (step of steps; track step.number) {<li appReveal><span class="step-number">{{ step.number }}</span><h3>{{ step.title }}</h3><p>{{ step.description }}</p></li>}</ol>
+  <p class="demo-note">Segmentos, regiões e etapas ilustrativos, sujeitos à confirmação da MAVI.</p>
+</div></section>

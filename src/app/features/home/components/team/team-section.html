@@ -1,0 +1,4 @@
+<section class="section team" id="equipe" aria-labelledby="team-title"><div class="container team-grid">
+  <div class="team-intro" appReveal><p class="eyebrow">GENTE DE VERDADE. IDEIAS TAMBÉM.</p><h2 id="team-title">Por trás da MAVI,<br><span>gente que se conecta.</span></h2><p>Matheus e Virgílio. Dois olhares, uma vontade em comum: fazer a sua marca ocupar o lugar que ela merece.</p><span class="team-symbol" aria-hidden="true">✳</span><p class="demo-note">Fotos e nomes do material da MAVI.<br>Funções e apresentações demonstrativas.</p></div>
+  <div class="team-cards">@for (person of team; track person.name) {<article class="team-card" appReveal><div class="portrait"><img [src]="person.image" [alt]="person.name" width="420" height="420" loading="lazy" /><span>MAVI / PESSOAS</span></div><h3>{{ person.name }}</h3><span class="person-role">{{ person.role }}</span><p>{{ person.description }}</p></article>}</div>
+</div></section>

@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:ci": "ng test --watch=false --browsers=ChromeHeadless",
+    "check:media": "node tools/check-media.mjs",
     "serve:ssr:mavi-landing-page": "node dist/mavi-landing-page/server/server.mjs"
   },
   "prettier": {

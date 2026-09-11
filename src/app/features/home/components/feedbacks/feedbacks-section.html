@@ -1,6 +1,17 @@
-  <section class="section feedbacks" id="feedbacks" aria-labelledby="feedbacks-title">
-    <div class="container feedback-grid">
-      <div appReveal><p class="eyebrow">CONEXÕES QUE CONTAM HISTÓRIAS</p><h2 id="feedbacks-title">Quem vive a MAVI<br><span>tem o que contar.</span></h2><p class="feedback-intro">Um espaço para a experiência de quem<br>constrói sua comunicação com a gente.</p></div>
-      @if (testimonials.length) {<div class="testimonials">@for (testimonial of testimonials; track testimonial.name) {<figure class="testimonial"><blockquote>{{ testimonial.quote }}</blockquote><figcaption><strong>{{ testimonial.name }}</strong><span>{{ testimonial.role }}</span></figcaption></figure>}</div>} @else {<div class="feedback-empty" appReveal><span class="quote-mark" aria-hidden="true">“</span><span class="coming-soon">EM BREVE</span><h3>Histórias reais.<br>Novas perspectivas.</h3><p>Em breve, você vai conhecer por aqui<br>os feedbacks de quem faz parte dessa história.</p><span class="empty-decoration" aria-hidden="true">✳</span></div>}
-    </div>
-  </section>
+﻿<section class="section feedbacks" id="feedbacks" aria-labelledby="feedbacks-title">
+  <div class="container">
+    <div class="feedback-heading" appReveal><div><p class="eyebrow">CONEXÕES QUE CONTAM HISTÓRIAS</p><h2 id="feedbacks-title">Quem vive a MAVI<br><span>tem o que contar.</span></h2></div><p>Uma parceria vai além das entregas.<br>Ela aparece na experiência de cada pessoa.</p></div>
+    @if (testimonials.length) {
+      <div class="testimonials">@for (testimonial of testimonials; track testimonial.name) {
+        <figure class="testimonial" appReveal>
+          <span class="quote-mark" aria-hidden="true">“</span>
+          @if (testimonial.demo) {<span class="demo-badge">DEPOIMENTO FICTÍCIO</span>}
+          <blockquote>{{ testimonial.quote }}</blockquote>
+          <figcaption><span class="avatar" aria-hidden="true">{{ testimonial.initials }}</span><div><strong>{{ testimonial.name }}</strong><span>{{ testimonial.role }}</span></div></figcaption>
+        </figure>
+      }</div>
+    } @else {
+      <div class="feedback-empty"><span class="eyebrow">EM BREVE</span><h3>Novas histórias por aqui.</h3><p>Em breve, você vai conhecer os feedbacks de quem faz parte dessa história.</p></div>
+    }
+  </div>
+</section>
